@@ -1,12 +1,20 @@
 function ListGroup() {
+    const items = [
+        'New York',
+        'San Francisco',
+        'Tokyo',
+        'London',
+        'Paris'
+    ];
+
+//mapping over the items array and converting them into list items
+// to implement the function inside the return, it must be wrapped in curly-braces.
+// Curly-braces make things dynamic
     return (<>
         <h1>List</h1>
         <ul className="list-group">
-            <li className="list-group-item">item one</li>
-            <li className="list-group-item">item two</li>
-            <li className="list-group-item">item three</li>
-            <li className="list-group-item">item four</li>
-            <li className="list-group-item">item five</li>
+            {items.map(item =>
+                (<li>{item}</li>))}
         </ul>
     </>)
 
