@@ -1,20 +1,10 @@
-import ListGroup from "./components/ListGroup.tsx";
+import Alert from "./components/Alert.tsx";
 
 function App() {
-    const items = [
-        'New York',
-        'San Francisco',
-        'Tokyo',
-        'London',
-        'Paris'
-    ];
-    const handleSelectItem = (item: string) => {
-        console.log(item);
-    }
-    return <div>
-        <ListGroup items={items} heading="Cities"
-                   onSelectItem={handleSelectItem}/>
-    </div>
+
+    return (<div>
+        <Alert text="Hello Lauren"/>
+    </div>)
 }
 
 export default App;
