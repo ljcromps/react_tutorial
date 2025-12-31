@@ -3,7 +3,9 @@ import Alert from "./components/Alert.tsx";
 function App() {
 
     return (<div>
-        <Alert text="Hello Lauren"/>
+        <Alert>
+            Hello <b>Lauren </b>
+        </Alert>
     </div>)
 }
 

@@ -1,11 +1,13 @@
+import type {ReactNode} from "react";
+
 interface AlertProps {
-    text: string;
+    children: ReactNode;
 }
 
-const Alert = ({text}: AlertProps) => {
+const Alert = ({children}: AlertProps) => {
     return (
         <div className="alert alert-primary" role="alert">
-            {text}
+            {children}
         </div>
     )
 }
