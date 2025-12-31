@@ -8,9 +8,6 @@ function ListGroup() {
         'London',
         'Paris'
     ];
-    let selectedIndex = 0;
-    // without useState, this is local to the function component, React doesn't know about it
-
     const [selectedIndex, setSelectedIndex] = useState(-1);
 
     // Hook - a function helps us tap into built-in features in React.
@@ -28,7 +25,7 @@ function ListGroup() {
                 (<li className={selectedIndex === index ? 'list-group-item active' : 'list-group-item'}
                      key={item}
                      onClick={() => {
-                         selectedIndex = index
+                         setSelectedIndex(index);
                      }}
                     >
                         {item}
