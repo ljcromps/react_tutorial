@@ -1,4 +1,4 @@
-import type {MouseEvent} from "react";
+import {useState} from "react";
 
 function ListGroup() {
     const items = [
@@ -8,24 +8,28 @@ function ListGroup() {
         'London',
         'Paris'
     ];
+    let selectedIndex = 0;
+    // without useState, this is local to the function component, React doesn't know about it
 
-    //event handler
-    const handleClick = (event: MouseEvent) => console.log(event)
+    const [selectedIndex, setSelectedIndex] = useState(-1);
 
+    // Hook - a function helps us tap into built-in features in React.
+    // We tell React it could have data/state that changes over time
 
 //mapping over the items array and converting them into list items
 // to implement the function inside the return, it must be wrapped in curly-braces.
-
 // Curly-braces make things dynamic
     // logical conditions can help avoid the use of null
     return (<>
         <h1>List</h1>
         {items.length === 0 && <p>No item found</p>}
         <ul className="list-group">
-            {items.map((item) =>
-                (<li className="list-group-item"
+            {items.map((item: string, index: number) =>
+                (<li className={selectedIndex === index ? 'list-group-item active' : 'list-group-item'}
                      key={item}
-                     onClick={handleClick}
+                     onClick={() => {
+                         selectedIndex = index
+                     }}
                     >
                         {item}
                     </li>
