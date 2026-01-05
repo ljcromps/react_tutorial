@@ -1,11 +1,12 @@
 interface ButtonProps {
     children: string;
+    color?: string;
     onClick: () => void;
 }
 
-const BootstrapButton = ({children, onClick}: ButtonProps) => {
+const BootstrapButton = ({children, color, onClick}: ButtonProps) => {
     return (
-        <button className="btn btn-primary" onClick={onClick}>
+        <button className={'btn btn-' + color} onClick={onClick}>
             {children}
         </button>
     );
