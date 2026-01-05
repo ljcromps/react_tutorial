@@ -7,7 +7,8 @@ function App() {
         <Alert>
             Hello <b>Lauren </b>
         </Alert>
-        <BootstrapButton>
+        <BootstrapButton onClick={() => console.log('button clicked')}>
+            Children
         </BootstrapButton>
     </div>)
 }
