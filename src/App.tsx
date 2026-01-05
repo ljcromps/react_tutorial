@@ -7,7 +7,7 @@ function App() {
         <Alert>
             Hello <b>Lauren </b>
         </Alert>
-        <BootstrapButton onClick={() => console.log('button clicked')}>
+        <BootstrapButton onClick={() => console.log('button clicked')} color={'danger'}>
             Children
         </BootstrapButton>
     </div>)
