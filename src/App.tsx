@@ -1,4 +1,5 @@
 import Alert from "./components/Alert.tsx";
+import BootstrapButton from "./components/BootstrapButton.tsx";
 
 function App() {
 
@@ -6,6 +7,8 @@ function App() {
         <Alert>
             Hello <b>Lauren </b>
         </Alert>
+        <BootstrapButton>
+        </BootstrapButton>
     </div>)
 }
 

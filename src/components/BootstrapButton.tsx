@@ -1,8 +1,8 @@
 function BootstrapButton() {
     return (
-        <div className="btn btn-primary">
-            Primary
-        </div>
+        <button className="btn btn-primary">
+            Bootstrap Button
+        </button>
     );
 }
 
